@@ -1,0 +1,63 @@
+body {
+    background: url(/assets/img/bk.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* background-color: rgb(250, 250, 250); */
+    
+}
+* {
+    box-sizing: border-box;
+}
+.work {
+    text-align: center;
+}
+#hamburgerImg {
+    height: 200px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+#title {
+    text-align: center;
+    font-family: 'Montserrat Subrayada', sans-serif;
+}
+#inputArea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    height: 20px;
+    width: 250px;
+}
+
+#submitButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    height: 25px;
+    width: 150px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    /* height: 300px; Should be removed. Only for demonstration */
+    text-align: center;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+
+}
+
+.eat-button {
+    border-radius: 0;
+    /* border: 2px; */
+}

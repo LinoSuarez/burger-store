@@ -1,0 +1,32 @@
+{{!-- Setup the index.handlebars to have the template that Handlebars can render onto.
+
+Create a button in index.handlebars that will submit the user input into the database. --}}
+<div class="work">
+
+<img id="hamburgerImg" src="assets/img/burger.png">
+<h1 id="title">Eat-Da-Burguer</h1>
+<input type="text" name="fname" id="inputArea">
+<button id="submitButton" type="button">Submit!</button>
+<p id="description">Enter a burger you want to Eat and click 'Submit'</p>
+
+</div>
+
+<div class="row">
+  <div class="column" id="toEatBurguer">
+      <h2>TO EAT</h2>
+      
+   {{#each arr}}
+        {{#unless devoured}}
+         <p>{{burger_name}} <button class="eat-button" data-id={{id}}>Eat</button> <button class="delete-button" data-id={{id}}>Delete</button></p>
+        {{/unless}}
+    {{/each}}
+  </div>
+  <div class="column" id="eatenBurguer">
+      <h2>EATEN</h2>
+    {{#each arr}}
+        {{#if devoured}}
+         <p>{{burger_name}} <button class="undo-button" data-id={{id}}>UnDo</button> <button class="delete-button" data-id={{id}}>Delete</button></p>
+        {{/if}}
+    {{/each}}
+  </div>
+</div>
